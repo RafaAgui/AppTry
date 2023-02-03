@@ -1,0 +1,13 @@
+
+<p *ngIf="!product; else templateProduct">No está el producto que buscas</p>
+<ng-template #templateProduct>
+  <article >
+    <header >
+      <h2>{{ product.name }}</h2>
+    </header>
+    <p>{{ product.description }}</p>
+    <p>{{ product.stock }}</p>
+    <p>{{ product.price | currency:'EUR'  }}</p>
+    <button [routerLink]="['/products']">Volver</button>
+  </article>
+</ng-template>

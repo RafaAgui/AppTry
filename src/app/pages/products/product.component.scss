@@ -1,0 +1,14 @@
+.item-product {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  &__item{
+    width: calc(33% - .7rem );
+    margin: .5rem;
+    padding: .5rem;
+    background-color: beige;
+    border-radius: .625rem;
+    box-shadow: .625rem .625rem .625rem #ddd;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,8 @@
+<article >
+  <header >
+    <h2>{{ product.name }}</h2>
+  </header>
+  <p>{{ product.description }}</p>
+  <button class="btn" (click)="onClick()">{{ product.price | currency:'EUR'  }}</button>
+  <button class="btn" [routerLink]="['/products', product.id]">Leer más...</button>
+</article>

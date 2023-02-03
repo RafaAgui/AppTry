@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit()" #checkoutForm="ngForm" @enteranimation>
+  <fieldset class="form-field">
+    <input placeholder="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+  </fieldset>
+  <fieldset class="form-field">
+    <legend>Select:</legend>
+    <div>
+      <input type="radio" name="delivery" id="pickup" value="pickup" (change)="onPickupOrDelivery(false)" checked>
+      <label for="pickup">pickup</label>
+    </div>
+
+    <div>
+      <input type="radio" name="delivery" id="delivery"  value="delivery" (change)="onPickupOrDelivery(true)">
+      <label for="delivery">delivery</label>
+    </div>
+</fieldset>
+<fieldset class="form-field" *ngIf="isDelivery">
+  <input type="text" placeholder="Shipping Address" [(ngModel)]="model.shippingAddress" name="shippingAddress" #shippingAddress="ngModel">
+  <input type="text" placeholder="City" [(ngModel)]="model.city" name="city" #city="ngModel">
+</fieldset>
+
+<fieldset class="form-field" *ngIf="!isDelivery">
+  <legend>Select:</legend>
+  <select type="text" [(ngModel)]="model.store" >
+    <option value="Tienda" *ngFor="let store of stores">
+      {{store.name}} - {{ store.openingHours}}
+    </option>
+  </select>
+</fieldset>
+
+<button class="form-field" [disabled]="!checkoutForm.form.valid" type="submit">Enviar</button>
+
+<app-details></app-details>
+</form>

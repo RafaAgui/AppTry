@@ -1,0 +1,14 @@
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: burlywood;
+  border-radius: 1rem;
+  border: 1px solid blanchedalmond;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  &:hover{
+    background-color:blanchedalmond;
+  }
+}
+

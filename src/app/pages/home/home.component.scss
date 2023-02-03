@@ -1,0 +1,10 @@
+.item-product{
+  &__item {
+    box-sizing: border-box;
+    margin: .5rem;
+    padding: .5rem;
+    background-color: beige;
+    border-radius: 0.5rem;
+    width: 30%;
+  }
+}

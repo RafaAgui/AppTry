@@ -1,0 +1,12 @@
+
+<section  class="item-product" [@listAnimation]="products.length">
+<app-item
+  (addToCardClick)="addToCart($event)"
+  [product]="product"
+  *ngFor="let product of products"
+  class="item-product__item">
+</app-item>
+</section>
+
+
+

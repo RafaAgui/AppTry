@@ -1,0 +1,11 @@
+<header class="app-header">
+  <a [routerLink]="['/']" (click)="anima()" [@trololo]="state"><img src="../../../assets/logo--yellow.svg"></a>
+  <h1>Tienda de informática</h1>
+  <nav class="app-header__nav">
+    <ul>
+      <li><a [routerLink]="['./products']">Productos</a></li>
+      <li>  <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
