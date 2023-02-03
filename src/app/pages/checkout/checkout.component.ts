@@ -15,7 +15,7 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
       transition('* => *', [
         query('.form-field', style({ opacity: 0, transform: 'translateX(-100%)'})),
         query('.form-field', stagger('500ms', [
-          animate('800ms 1.2s ease-out', style({opacity: 1, transform: 'translate(0)'}))
+          animate('800ms 1.2s ease-out', style({opacity: 1, transform: 'translate()'}))
         ]))
       ]),
     ])
