@@ -1,10 +1,15 @@
-.item-product{
-  &__item {
-    box-sizing: border-box;
-    margin: .5rem;
-    padding: .5rem;
+.section-home {
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+
+  button {
+    padding: 1rem 2rem;
     background-color: beige;
-    border-radius: 0.5rem;
-    width: 30%;
+    border-radius: 1.5rem;
+    border-color: burlywood;
+  }
+  .animationHome {
+
   }
 }
